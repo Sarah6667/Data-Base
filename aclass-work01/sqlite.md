@@ -1,4 +1,4 @@
-#建立一个SQLite数据库的基本操作
+# 建立一个SQLite数据库的基本操作
 
 要想建一个数据库，首先需要学习数据库的相关操作，也就是说要下载好一些数据库进行有关方面的学习。今天我先下载好了SQLite数据库，简单地介绍一下安装步骤和使用测试结果。这参照了一篇博客文章（https://www.cnblogs.com/oukele/p/9540293.html）以及相关菜鸟教程（https://www.runoob.com/sqlite/sqlite-installation.html）。
 

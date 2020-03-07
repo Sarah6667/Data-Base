@@ -5,5 +5,7 @@
   2. 学生分为本科生和研究生，老师按职称可以分为讲师、副教授、教授，副教授以上职称的可以作为研究生的导师。
 	
   3. 一个教工可以负责多个项目；每个项目只能有一个负责人；一个老师可以参与多个项目；一个本科生只能参与一个项目，一个研究生学生可以参与多个项目；一个项目可以有多个学生和老师参与。
+
 ### 答案
-！[ER图](https://github.com/Sarah6667/Data-Base/blob/master/images/db-er2.jpg)
+
+![ER图](https://github.com/Sarah6667/Data-Base/blob/master/images/db-er2.jpg)

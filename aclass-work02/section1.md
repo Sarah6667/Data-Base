@@ -17,4 +17,4 @@
 
 ### Q3.	已知有如下关系模式：E1(_a1, a2, a3)，E2(_a3, a4)， E3(_a5, a6)， E4(_a3, _a5, a7)，其中带下划线的属性标识为所在关系模式的主码。试画出相应的E-R图，使得可以从该E-R图推导出上述关系模式。
 
-![image](
+![image](https://github.com/Sarah6667/Data-Base/blob/master/images/db-er1.jpg)

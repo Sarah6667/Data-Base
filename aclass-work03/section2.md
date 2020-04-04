@@ -36,30 +36,55 @@ select friend2, count(1) from acquaintance group by friend2;  最大也就7个�
 select * from acquaintance where class='A'; （从A到Z轮流查询，对查询的结果进行比较）
 
 A：l+s u+o (没有)
+
 B：a+p   c+t  f+c  k+n  p+q  t+f ( p, c, t, f 都有两个朋友)
+
 C：j+u   k+b  l+y  n+g (没有)
+
 D：b+l  o+a  t+u  u+s (u最多，有两个朋友)
+
 E：f+y  n+q  n+z  p+o  r+k (n最多)
+
 F:  i+k  i+n  y+o (i最多)
+
 G:  c+d  g+n  p+e (无)
+
 H：d+j (无)
+
 I：o+f （无）
+
 J：s+d   s+o  y+c  (s最多)
+
 K：p+v  x+c (无)
+
 L：d+y  g+j  i+z  m+i   p+d  w+y  y+p (y和i一样最多，有3个)
+
 M：a+r  k+t  q+t (最多，有2个)
+
 N:  i+b  j+f (无)
+
 O：f+o  g+l  m+l  q+s  (l最多，有两个)
+
 P:  i+g  t+g  u+j (g最多，有两个)
+
 Q: b+q  n+m  q+u  x+e  (无)
+
 R：m+f  n+w  t+m  u+l  （m最多，有2个） 
+
 S:  c+f  k+o  (无)
+
 T：b+p  l+n  (无)
+
 U：b+y  j+e  x+b  z+a (b最多，有2个）
+
 V：g+t   m+u  v+g  （g最多，有2个）
+
 W：b+f  g+s  j+w  （没有）
+
 X：j+r  s+k  x+r  （r最多，为2个）
-Y：e/f/o/p/t:2     e+p  e+s  f+d  f+q  o+t  o+u  p+c  t+k  
+
+Y：e+p  e+s  f+d  f+q  o+t  o+u  p+c  t+k  （e/f/o/p/t最多，都为2个）    
+
 Z: 无数据
 
 ### Q5：找出在同一类别里面通过朋友而结识的其他朋友（朋友的朋友也是朋友）。
@@ -67,30 +92,55 @@ Z: 无数据
 select friend1,friend2,class from acquaintance where class='A'; 然后照此轮流搜26个字母，再进行比对。
 
 A: 互不认识
+
 B：a和q通过p认识；c、t、f互相认识
+
 C：互不认识
+
 D：t和s通过u认识
+
 E：q和z通过n认识
+
 F：k和n通过i认识
+
 G：互不认识
+
 H：互不认识
+
 I：互不认识
+
 J：d和o通过s认识
+
 K: 互不认识
-L：d和y、p互相认识，p和w通过y认识，m和z通过i认识，
+
+L：d和y、p互相认识，p和w通过y认识，m和z通过i认识
+
 M：k和q通过t认识
+
 N：互不认识
+
 O：g和m通过l认识
+
 P：i和t通过g认识
+
 Q：b和u通过q认识
+
 R：f和t通过认识
+
 S：互不认识
+
 T：互不认识
+
 U：y和x通过b认识
+
 V：v和t通过g认识
+
 W：互不认识
+
 X：j和x通过认识
+
 Y：p和s通过e认识；d和q通过f认识；t和u通过o认识；o和k通过t认识
+
 Z：无数据
 
 ### Q6：找出这样的人，通过他而结识的朋友对最多(p1和p2原本不相识，他们通过p3结识，那么p3的连接度为1，找出连接度最高的人)。
@@ -98,30 +148,55 @@ Z：无数据
 select friend1, friend2 from acquaintance where friend1 ='a' or friend2='a';  （从a到z）依次搜寻，然后将得到的结果进行归纳，比较，再得出结论。（连接度的计算为n*(n-1)/2）
 
 a: p/r/o/z  连接度为6  
+
 b: f/l/p/q/y/i/k/x   28
+
 c: d/f/t/p/x/y  15
+
 d: c/j/y/f/p/s  15
+
 e: p/s/j/p  6
+
 f: b/c/d/o/q/y/j/m/t   36
+
 g: j/l/n/s/t/i/v  21
+
 h: 无
+
 i: b/g/k/n/z/m   15
+
 j: d/g/e/f/r/u/w/j  28
+
 k: i/b/n/o/t/r/s  21
+
 l: b/g/n/s/y/m/u  21
+
 m: f/i/l/u/n/t  15
+
 n: g/i/k/l/m/q/w/z  28
+
 o: f/k/a/t/u/p/s/v  28
+
 p: a/b/e/c/d/o/q/v/y  36
+
 q: b/f/n/p/s/t/u  21
+
 r: a/j/k/x  6
+
 s: e/g/l/q/d/k/o/s  28
+
 t: c/g/k/o/q/f/m/u  28
+
 u: j/m/o/q/t/l/s  21
+
 v: p/g   1
+
 w: j/n/y  3 
+
 x: b/c/e/f  6
+
 y: b/d/f/l/w/c/o/p  28
+
 z: i/n/a  3
 
 所以，连接度最高的为f和p,其连接度为36.

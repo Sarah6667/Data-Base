@@ -1,10 +1,10 @@
-### 问题一
+## 问题一
 
 测试使用python或php连接两种以上数据库服务端，并执行简单查询并打印返回结果。
 
-#### 答案一
+### 答案一
 
-##### 连接MySQL
+#### 连接MySQL
 
 我选择python的操作方式。python版本是3.7，所以选择的python接口为pymysql;如果是python,可能要改为MySQLdb。
 
@@ -35,7 +35,7 @@
 
 ![result3](https://github.com/Sarah6667/Data-Base/blob/master/images/3.jpg)
 
-##### 连接sqlite3
+#### 连接sqlite3
 
 python的标准库中已经包含了sqlite3，并且我自己之前下载安装了sqlite3,所以可直接使用python来操作sqlite数据库。
 
@@ -53,7 +53,7 @@ python的标准库中已经包含了sqlite3，并且我自己之前下载安装�
 
 测试python或php使用两种以上不同方法连接同一数据库服务端，并执行简单查询并打印返回结果。
 
-#### 答案二
+### 答案二
 
 我选择用php的两种方式来连接并对MySQL数据库进行操作。
 
@@ -63,13 +63,13 @@ python的标准库中已经包含了sqlite3，并且我自己之前下载安装�
 
 2) 
 
-##### 面向过程（最简单的方式）
+#### 面向过程（最简单的方式）
 
 1. 首先要创建一个PHP网页，使用相关操作符和函数来完成。代码以及查询结果如下：
 
 ![result5](https://github.com/Sarah6667/Data-Base/blob/master/images/5.jpg)
 
-##### 面向对象
+#### 面向对象
 
 ![result6](https://github.com/Sarah6667/Data-Base/blob/master/images/6.jpg)
 

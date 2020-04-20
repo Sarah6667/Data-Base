@@ -1,43 +1,75 @@
 ### 1.练习存储过程、函数与触发器的定义与调用
+
 1)存储过程
+
 delimiter //
+
 CREATE PROCEDURE SP_SEARCH(IN S_p char(10)) 
+
 BEGIN
+
 IF S_p is null or S_p ==' ' THEN
+
 SELECT * FROM t_user; 
+
 ELSE
+
 SELECT * FORM t_user WHERE user_name LIKE S_p;
+
 END IF; 
+
 END //
 
 delimiter ;
+
 CALL SP_SEARCH('');
 
 2)函数
+
 delimiter //
+
 CREATE FUNCTION p_max(num1 INT,p_num2 ) 
+
 RETURNS INT
+
 BEGIN
+
 IF num1 >= num2 THEN
+
 RETURN num1; 
+
 ELSE
+
 RETURN num2; 
+
 END IF; 
+
 END //
+
 delimiter ;
 
 SET @num1=2; 
+
 SET @num2=34; 
+
 SELECT p_max(@num1,@num2);
 
 3)触发器
+
 delimiter $
+
 create trigger t after
+
 insert on stu_course
+
 for each row
+
 begin
+
   update course set no=no-1 where c = "语文";
+  
 end$
+
 delimiter ;
 
 ### 2.存储过程、函数与触发器在真实业务系统中都适用于具体哪些场景，用自己的话说明一下原因。

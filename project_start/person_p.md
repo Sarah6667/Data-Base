@@ -14,9 +14,9 @@ sql语法也会影响到查询的速度，比如说大小写，所以尽量保�
 
 下图两张图片的对比，可以验证上述观点。
 
-!(https://raw.githubusercontent.com/Sarah6667/Data-Base/master/images/capture_20200510203546781.bmp)
+![sql1.1](https://raw.githubusercontent.com/Sarah6667/Data-Base/master/images/capture_20200510203546781.bmp)
 
-!(https://raw.githubusercontent.com/Sarah6667/Data-Base/master/images/capture_20200510203629928.bmp)
+![sql1.2](https://raw.githubusercontent.com/Sarah6667/Data-Base/master/images/capture_20200510203629928.bmp)
 
 效果一样，一个用时0.001s，一个用时0.000s。
 
